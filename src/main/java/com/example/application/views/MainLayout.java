@@ -1,6 +1,7 @@
 package com.example.application.views;
 
 import com.example.application.views.crearcita.CrearCitaView;
+import com.example.application.views.doctores.DoctoresView;
 import com.example.application.views.paciente.PacienteView;
 import com.example.application.views.sistemadecitas.SistemaDeCitasView;
 import com.example.application.views.vercitas.VerCitasView;
@@ -58,6 +59,7 @@ public class MainLayout extends AppLayout {
         nav.addItem(new SideNavItem("Sistema De Citas", SistemaDeCitasView.class,
                 LineAwesomeIcon.CLINIC_MEDICAL_SOLID.create()));
         nav.addItem(new SideNavItem("Paciente", PacienteView.class, LineAwesomeIcon.MALE_SOLID.create()));
+        nav.addItem(new SideNavItem("Doctor", DoctoresView.class, LineAwesomeIcon.USER_MD_SOLID.create()));
         nav.addItem(new SideNavItem("Crear Cita", CrearCitaView.class, LineAwesomeIcon.CLOCK.create()));
         nav.addItem(new SideNavItem("Ver Citas", VerCitasView.class, LineAwesomeIcon.EYE.create()));
         nav.addItem(new SideNavItem("Ver Doctores", VerDoctoresView.class, LineAwesomeIcon.EYE.create()));
@@ -84,3 +86,4 @@ public class MainLayout extends AppLayout {
         return title == null ? "" : title.value();
     }
 }
+
