@@ -1,0 +1,110 @@
+package com.example.application.views.vercitas;
+
+import com.example.application.views.MainLayout;
+import com.vaadin.flow.component.Composite;
+import com.vaadin.flow.component.dependency.Uses;
+import com.vaadin.flow.component.html.H4;
+import com.vaadin.flow.component.html.H5;
+import com.vaadin.flow.component.html.H6;
+import com.vaadin.flow.component.html.Hr;
+import com.vaadin.flow.component.icon.Icon;
+import com.vaadin.flow.component.orderedlayout.FlexComponent;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.router.PageTitle;
+import com.vaadin.flow.router.Route;
+import com.vaadin.flow.theme.lumo.LumoUtility.Gap;
+
+@PageTitle("Ver Citas")
+@Route(value = "ver-citas", layout = MainLayout.class)
+@Uses(Icon.class)
+public class VerCitasView extends Composite<VerticalLayout> {
+
+    public VerCitasView() {
+        H4 h4 = new H4();
+        Hr hr = new Hr();
+        HorizontalLayout layoutRow = new HorizontalLayout();
+        H5 h5 = new H5();
+        H5 h52 = new H5();
+        H5 h53 = new H5();
+        H5 h54 = new H5();
+        H5 h55 = new H5();
+        H5 h56 = new H5();
+        H5 h57 = new H5();
+        HorizontalLayout layoutRow2 = new HorizontalLayout();
+        H6 h6 = new H6();
+        H6 h62 = new H6();
+        H6 h63 = new H6();
+        H6 h64 = new H6();
+        H6 h65 = new H6();
+        H6 h66 = new H6();
+        H6 h67 = new H6();
+        getContent().setWidth("100%");
+        getContent().getStyle().set("flex-grow", "1");
+        h4.setText("Citas creadas");
+        h4.setWidth("max-content");
+        layoutRow.setWidthFull();
+        getContent().setFlexGrow(1.0, layoutRow);
+        layoutRow.addClassName(Gap.MEDIUM);
+        layoutRow.setWidth("100%");
+        layoutRow.setHeight("30px");
+        h5.setText("Paciente");
+        layoutRow.setAlignSelf(FlexComponent.Alignment.CENTER, h5);
+        h5.setWidth("90px");
+        h52.setText("Nombres");
+        layoutRow.setAlignSelf(FlexComponent.Alignment.CENTER, h52);
+        h52.setWidth("200px");
+        h53.setText("Apellidos");
+        layoutRow.setAlignSelf(FlexComponent.Alignment.CENTER, h53);
+        h53.setWidth("200px");
+        h54.setText("Doctor");
+        layoutRow.setAlignSelf(FlexComponent.Alignment.CENTER, h54);
+        h54.setWidth("150px");
+        h55.setText("Especialidad");
+        layoutRow.setAlignSelf(FlexComponent.Alignment.CENTER, h55);
+        h55.setWidth("100px");
+        h56.setText("Fecha");
+        layoutRow.setAlignSelf(FlexComponent.Alignment.CENTER, h56);
+        h56.setWidth("200px");
+        h57.setText("Hora");
+        layoutRow.setAlignSelf(FlexComponent.Alignment.CENTER, h57);
+        h57.setWidth("90px");
+        layoutRow2.setWidthFull();
+        getContent().setFlexGrow(1.0, layoutRow2);
+        layoutRow2.addClassName(Gap.MEDIUM);
+        layoutRow2.setWidth("100%");
+        layoutRow2.getStyle().set("flex-grow", "1");
+        h6.setText("1720175189");
+        h6.setWidth("90px");
+        h62.setText("Justin alejandro");
+        h62.setWidth("200px");
+        h63.setText("Paqui Vega");
+        h63.setWidth("200px");
+        h64.setText("Dr.Robison");
+        h64.setWidth("150px");
+        h65.setText("Cirugano");
+        h65.setWidth("100px");
+        h66.setText("16 / 09 /2020");
+        h66.setWidth("200px");
+        h67.setText("9: 00 AM");
+        h67.setWidth("70px");
+        getContent().add(h4);
+        getContent().add(hr);
+        getContent().add(layoutRow);
+        layoutRow.add(h5);
+        layoutRow.add(h52);
+        layoutRow.add(h53);
+        layoutRow.add(h54);
+        layoutRow.add(h55);
+        layoutRow.add(h56);
+        layoutRow.add(h57);
+        getContent().add(layoutRow2);
+        layoutRow2.add(h6);
+        layoutRow2.add(h62);
+        layoutRow2.add(h63);
+        layoutRow2.add(h64);
+        layoutRow2.add(h65);
+        layoutRow2.add(h66);
+        layoutRow2.add(h67);
+    }
+}
