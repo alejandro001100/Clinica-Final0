@@ -78,7 +78,9 @@ public class CrearCitaView extends VerticalLayout {
 
     private void cargarDatosPaciente() {
         String cedula = pacienteCedulaField.getValue();
+        System.out.println("Cedula: " + cedula); // Log the cedula
         Paciente paciente = pacienteService.obtenerPacientePorCedula(cedula);
+        System.out.println("Paciente: " + paciente); // Log the patient
         if (paciente != null) {
             mensajeBienvenida.setText("Bienvenido: " + paciente.getNombre() + " " + paciente.getApellido());
             mostrarCamposDeCita();
@@ -108,8 +110,6 @@ public class CrearCitaView extends VerticalLayout {
         cita.setFechaHora(fechaHora.getValue());
         cita.setDoctorId(doctorSeleccionado.getId()); // Asegúrate de que Doctor tiene un getId() método
         cita.setPacienteId(paciente.getId()); // Asegúrate de que Paciente tiene un getId() método
-        // cita.setDescripcion(...); // Si necesitas establecer una descripción
-        // cita.setEstado(...); // Si necesitas establecer un estado para la cita
 
         citaService.guardarCita(cita);
         Notification.show("Cita guardada con éxito");
